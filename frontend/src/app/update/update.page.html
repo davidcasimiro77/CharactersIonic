@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Update Character</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list lines="full">
+    <form [formGroup]="updateCharacterFg" (ngSubmit)="onSubmit()">
+      
+      <ion-item>
+        <ion-label position="floating">Real name</ion-label>
+        <ion-input formControlName="real_name" type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Alias</ion-label>
+        <ion-input formControlName="alias" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Rol</ion-label>
+        <ion-input formControlName="rol" type="text" required>
+        </ion-input>
+      </ion-item>      
+
+      <ion-item>
+        <ion-label position="floating">Status</ion-label>
+        <ion-input formControlName="status" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Origin</ion-label>
+        <ion-input formControlName="origin" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="success" expand="block">Update</ion-button>
+        </ion-col>
+      </ion-row>
+      
+    </form>
+  </ion-list>
+</ion-content>

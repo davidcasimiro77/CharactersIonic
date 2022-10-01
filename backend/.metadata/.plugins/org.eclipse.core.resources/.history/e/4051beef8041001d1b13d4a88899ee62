@@ -1,0 +1,18 @@
+package com.david.characters.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.david.characters.entity.services.ICharacterService;
+
+@RestController
+public class CharacterController {
+
+	@Autowired
+	ICharacterService characterService;
+	
+	@GetMapping("/characters")
+	public List<Character> getAllCharacters(){
+		return characterService.getAll();
+	}
+}

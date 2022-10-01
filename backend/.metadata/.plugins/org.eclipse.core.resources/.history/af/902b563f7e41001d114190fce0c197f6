@@ -1,0 +1,5 @@
+package com.david.characters.entity.services;
+
+public class CharacterServiceImpl {
+
+}

@@ -1,0 +1,10 @@
+package com.david.characters.entity.services;
+
+public interface ICharacterService {
+	public Character get(long id);
+	public List<Character> getAll();
+	public void post(Character character);
+	public void put(Character character, long id);
+	public void delete(long id);
+
+}

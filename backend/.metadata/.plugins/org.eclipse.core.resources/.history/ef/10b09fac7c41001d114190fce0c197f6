@@ -1,0 +1,21 @@
+package com.david.characters.entity.models;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "characters")
+public class Character {
+
+	private static final long serialVersionUID =1L
+		
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
+	
+	private String real_name;
+	private String alias;
+	private String rol;
+	private String status;
+	private String origin;
+}

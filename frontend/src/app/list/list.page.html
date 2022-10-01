@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Character List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let c of Characters">
+      <ion-label>
+        <h2>{{c.real_name}}</h2>
+        <h3>{{c.alias}}</h3>
+        <h3>{{c.rol}}</h3>
+        <h3>{{c.status}}</h3>
+        <h3>{{c.origin}}</h3>
+      </ion-label>
+
+      <div class="item-note" item-end>
+        <button ion-button clear [routerLink]="['/update/', c.id]">
+          <ion-icon name="create" style="zoom:1.5"></ion-icon>
+        </button>
+        <button ion-button clear (click)="removeCharacter(c)">
+          <ion-icon name="trash" style="zoom:1.5"></ion-icon>
+        </button>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <ion-button (click)="gotocreate()">Create</ion-button>
+</ion-content>
